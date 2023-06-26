@@ -1,607 +1,852 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Путь Солнца</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="css/custom.css" rel="stylesheet">
+    <title>Путь Солнца</title><!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet"><!--OpenGraph-->
+    <meta content="article" property="og:type"><!--<meta property="og:url" content="http://antonkoshuba.ru/">-->
+    <meta content="Путь Солнца" property="og:title">
+    <meta content="https://antonkoshuba.ru/img/dao." property="og:image">
+    <meta content="Разбор текстов Рэйв И-Цзин" property="og:description"><!--LIKELY-->
 
-<!--OpenGraph-->
-<meta property="og:type" content="article">
-<!--<meta property="og:url" content="http://antonkoshuba.ru/">-->
-<meta property="og:title" content="Путь Солнца">
-<meta property="og:image" content="https://antonkoshuba.ru/img/dao.">
-<meta property="og:description" content="Разбор текстов Рэйв И-Цзин">
+    <script src="likely/likely.js">
+    </script>
+    <link href="likely/likely.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+    </script>
+    <style>
+        body {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 18pt;
+        }
 
-<!--LIKELY-->
+        a.btn:visited {
+            color: white;
+        }
 
-<script src="likely/likely.js"></script>
+        h1,
+        h2,
+        h3 {
+            font-family: "MSC-900", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        }
 
-<link href="likely/likely.css" rel="stylesheet">
+        .rama {
+            border: 10px solid #f0ad4e;
+            padding: 20px 20px 40px 20px;
+            margin-top: 60px;
+        }
 
+        .toccolumn {
+            display: inline-block;
+            width: 48%;
+            max-width: 250px;
+            vertical-align: top;
+            margin-top: 15px;
+        }
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        .bodywrapper {
+            overflow-x: hidden;
+            background-color: #FFFFFF;
+            padding-bottom: 80px;
+        }
 
+        .lead {
+            font-weight: 400;
+        }
 
-<style>
+        /*Устанавливаем жирность*/
 
-body{
-margin-top: 0px; 
-margin-bottom:0px; 
-font-family: 'Helvetica Neue', Arial, sans-serif;
-font-size: 11pt;
-line-height: 18pt;}
-
-a.btn:visited{color:white;}
-
-h1,h2,h3{font-family: "MSC-900", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
-
-.rama{
-border: 10px solid #f0ad4e; 
-padding: 20px 20px 40px 20px; 
-margin-top:60px;
-}
-
-.toccolumn{
-display:inline-block; 
-width:48%; 
-max-width:250px; 
-vertical-align:top; 
-margin-top:15px;}
-
-.bodywrapper{
-overflow-x: hidden; 
-background-color: #FFFFFF; 
-padding-bottom:80px;}
-
-.lead{
-font-weight: 400;} /*Устанавливаем жирность*/
-
-/*.factoid{
-display:block;
-background-color: #da570f;
-text-align: center;
-color: white;
-height: 240px;
-width: 240px;
-margin-left: auto;
-margin-right: auto;
--webkit-border-radius: 300px;
--moz-border-radius: 300px;
-border-radius: 300px;
-padding-top: 10px;
-font-size: 95%;
-line-height: 123%;}
-
-
-.factoid span{
-font-size: 150px;
-line-height: 140px;
-display: block;
-margin-top: 13px;
-margin-bottom: 5px;
-font-weight: 100;}*/
-
-/*.promopack{
-background-color:#f79519; 
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-padding-top: 35px;
-padding-bottom: 30px;
-padding-right: 25px;
-margin-bottom: 150px;
-margin-top: 80px;
-border: 20px solid #da570f;
-
--webkit-box-shadow: 0px 15px 21px -15px rgba(0,0,0,0.65);
--moz-box-shadow: 0px 15px 21px -15px rgba(0,0,0,0.65);
-box-shadow: 0px 15px 21px -15px rgba(0,0,0,0.65);}*/
-
-i.invisible{
-opacity: 0;}
-
-/*.factoid-left{
-position:absolute; 
-bottom:1px; 
-right:-150px; 
-z-index: 100;}
-
-.factoid-right{
-position:absolute; 
-bottom:-270px; 
-left:-100px; 
-z-index: 100;}*/
+        /*.factoid{
+	display:block;
+	background-color: #da570f;
+	text-align: center;
+	color: white;
+	height: 240px;
+	width: 240px;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-border-radius: 300px;
+	-moz-border-radius: 300px;
+	border-radius: 300px;
+	padding-top: 10px;
+	font-size: 95%;
+	line-height: 123%;}
 
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width: 320px) {
-.splash{
-background-image:url(''); 
-background-repeat: no-repeat; 
-background-size:100%; 
-padding-top:50px; 
-background-repeat: no-repeat;}}
+	.factoid span{
+	font-size: 150px;
+	line-height: 140px;
+	display: block;
+	margin-top: 13px;
+	margin-bottom: 5px;
+	font-weight: 100;}*/
+
+        /*.promopack{
+	background-color:#f79519; 
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	padding-right: 25px;
+	margin-bottom: 150px;
+	margin-top: 80px;
+	border: 20px solid #da570f;
+
+	-webkit-box-shadow: 0px 15px 21px -15px rgba(0,0,0,0.65);
+	-moz-box-shadow: 0px 15px 21px -15px rgba(0,0,0,0.65);
+	box-shadow: 0px 15px 21px -15px rgba(0,0,0,0.65);}*/
+
+        i.invisible {
+            opacity: 0;
+        }
+
+        /*.factoid-left{
+	position:absolute; 
+	bottom:1px; 
+	right:-150px; 
+	z-index: 100;}
+
+	.factoid-right{
+	position:absolute; 
+	bottom:-270px; 
+	left:-100px; 
+	z-index: 100;}*/
 
 
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
-
-.splash{
-background-image:url(''); 
-background-size:100%; 
-padding-top:50px; 
-background-repeat: no-repeat;}
-
-.shiftright img{
-position: absolute; top: -3%;
-right: -29%;
-max-width: 130%;}
-
-.shiftright {
-padding-bottom: 53%;}
-}
-
-.shiftleft img{
-position: absolute; 
-left: -30%;
-max-width: 130%;
-top: -3%;}
-
-.shiftleft {
-padding-bottom: 53%;}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-}
-
-.illustratedrow{margin-top:60px;}
-
-.center{text-align: center;}
-
-.bordered{max-width: 100%; border:1px solid #dcdcdc;}
-
-ul.toc{
-padding-left: 0px;} /*Чтобы колонки были без отступа*/
-
-.toc li{
-font-family: 'Arial', sans-serif;
-font-size: 16px;
-line-height: 23px;
-padding-right: 25px;} /*Текст в колонках*/
-
-.secret{
-color:#b41616; 
-background-color: #e6fa03;}
-
-video{max-width: 100%; height:auto;}
-
-.exampular{
-background-color: black; 
-background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9) ), url('i/sky.jpg') no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover; color:white;}
-
-.exampular .caption{color:white;}
-
-.mstrsk{
-height:100vh; 
-background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url('i/sky.jpg') no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;}
-
-.mstrsk .texto{
-margin-top: 40vh; 
-color:white;}
-
-.radio-inline{
-border: 3px solid #dcdcdc; 
-padding:15px 20px 25px 20px; 
-display: inline-block; 
-border-radius: 10px; 
--moz-border-radius:10px; 
--webkit-border-radius:10px; 
-width:47%;} /*Настраиваем радиокнопки*/
-
-input[type="radio"]:checked + label{
--webkit-box-shadow: 0px 11px 23px -13px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 11px 23px -13px rgba(0,0,0,0.75);
-box-shadow: 0px 11px 23px -13px rgba(0,0,0,0.75); 
-border-color: #f0ad4e; /*background-color: #f0ad4e;*/ }
-
-input[type="radio"]{display: none;}
-
-.radio-inline span{display:block; font-size: 20px;}
-
-form{margin-top:15px; margin-bottom: 20px;}
-
-.small p{font-size: 12px; line-height: 16px;}
-
-li{
-list-style-type: none;
-}
-</style>
+        /* Extra Small Devices, Phones */
+        @media only screen and (min-width: 320px) {
+            .splash {
+                background-image: url('');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                padding-top: 50px;
+                background-repeat: no-repeat;
+            }
+        }
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+        /* Small Devices, Tablets */
+        @media only screen and (min-width: 768px) {
+
+            .splash {
+                background-image: url('');
+                background-size: 100%;
+                padding-top: 50px;
+                background-repeat: no-repeat;
+            }
+
+            .shiftright img {
+                position: absolute;
+                top: -3%;
+                right: -29%;
+                max-width: 130%;
+            }
+
+            .shiftright {
+                padding-bottom: 53%;
+            }
+        }
+
+        .shiftleft img {
+            position: absolute;
+            left: -30%;
+            max-width: 130%;
+            top: -3%;
+        }
+
+        .shiftleft {
+            padding-bottom: 53%;
+        }
+
+        /* Medium Devices, Desktops */
+        @media only screen and (min-width : 992px) {}
+
+        /* Large Devices, Wide Screens */
+        @media only screen and (min-width : 1200px) {}
+
+        .illustratedrow {
+            margin-top: 60px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bordered {
+            max-width: 100%;
+            border: 1px solid #dcdcdc;
+        }
+
+        ul.toc {
+            padding-left: 0px;
+        }
+
+        /*Чтобы колонки были без отступа*/
+
+        .toc li {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 23px;
+            padding-right: 25px;
+        }
+
+        /*Текст в колонках*/
+
+        .secret {
+            color: #b41616;
+            background-color: #e6fa03;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .exampular {
+            background-color: black;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('i/sky.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: white;
+        }
+
+        .exampular .caption {
+            color: white;
+        }
+
+        .mstrsk {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('i/sky.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .mstrsk .texto {
+            margin-top: 40vh;
+            color: white;
+        }
+
+        .radio-inline {
+            border: 3px solid #dcdcdc;
+            padding: 15px 20px 25px 20px;
+            display: inline-block;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            width: 47%;
+        }
+
+        /*Настраиваем радиокнопки*/
+
+        input[type="radio"]:checked+label {
+            -webkit-box-shadow: 0px 11px 23px -13px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 11px 23px -13px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 11px 23px -13px rgba(0, 0, 0, 0.75);
+            border-color: #f0ad4e;
+            /*background-color: #f0ad4e;*/
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .radio-inline span {
+            display: block;
+            font-size: 20px;
+        }
+
+        form {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .small p {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+    </script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"><!-- 3 KB -->
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js">
+    </script><!-- 16 KB -->
 </head>
 
 <body>
-
     <div class="container-fluid">
         <div class="row">
             <div class="narration center col-xs-12 mstrsk">
                 <div class="texto">
                     <h1 class="title">Путь Солнца</h1>
-                        <p class="lead">Разбор оригинальных текстов Рэйв И-Цзин<br/>и еженедельные напутствия</p>
+
+
+                    <p class="lead">Разбор оригинальных текстов Рэйв И-Цзин<br>
+                        и еженедельные напутствия</p>
                 </div>
             </div>
         </div>
     </div>
-
 
 
     <div class="container">
         <div class="row illustratedrow" style="margin-bottom:0px;">
             <div class="col-xs-12 col-md-8 narration">
                 <p class="lead">Меня зовут Мирра Трубникова, я сертифицированный гид, аналитик и переводчик.</p>
-                <p>За десять лет работы аналитиком я разобрала тысячи Бодиграфов, провела сотни базовых чтений. В каждом случае есть что-то интересное: неожиданная связь между воротами в Бодиграфе, озарение или наблюдение. Все интересные находки и инсайты я записываю.</p>
-                <p>Путь Солнца — это закрытый телеграм-канал в котором я разбираю и редактирую перевод названий ворот, линий и заголовков гексаграмм из книги Полный Рэйв И-Цзин, написанной основателем системы Дизайн Человека — Ра Уру Ху. Она предназначена для всех, кто профессионально занимается Дизайном Человека.</p>
-                <p>Чтобы понимать, о чем этот курс нужно сначала ознакомиться с  <a href="">ссылка на ДЧ</a>.</p>
+
+
+                <p>За десять лет работы аналитиком я разобрала тысячи Бодиграфов, провела сотни базовых чтений. В каждом
+                    случае есть что-то интересное: неожиданная связь между воротами в Бодиграфе, озарение или
+                    наблюдение. Все интересные находки и инсайты я записываю.</p>
+
+
+                <p>Путь Солнца — это закрытый телеграм-канал в котором я разбираю и редактирую перевод названий ворот,
+                    линий и заголовков гексаграмм из книги Полный Рэйв И-Цзин, написанной основателем системы Дизайн
+                    Человека — Ра Уру Ху. Она предназначена для всех, кто профессионально занимается Дизайном Человека.
+                </p>
+
+
+                <p>Чтобы понимать, о чем этот курс нужно сначала ознакомиться с <a href="">ссылка на ДЧ</a>.</p>
             </div>
-                <div class="hidden-xs hidden-sm col-md-4 col-lg-4">
-                    <p><img src="i/mirra.jpg"></p>
-                </div>
+
+
+            <div class="hidden-xs hidden-sm col-md-4 col-lg-4">
+                <p><img src="i/mirra.jpg">
+                </p>
+            </div>
         </div>
     </div>
+
 
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-10 col-md-8 narration">
                 <h2>В меню</h2>
-                <p>Всего 64 гексаграммы по 4 в месяц, 4 смысловых поста в неделю, 3 дня выходных. 
-                    Жестко привязываться к заходу солнца в линию — не будем. Почти половина из них уже написана и готова к отправке, остальные добавляются каждую неделю.
-                </p>
+
+
+                <p>Всего 64 гексаграммы по 4 в месяц, 4 смысловых поста в неделю, 3 дня выходных. Жестко привязываться к
+                    заходу солнца в линию — не будем. Почти половина из них уже написана и готова к отправке, остальные
+                    добавляются каждую неделю.</p>
+
+
                 <p>Шаг за шагом в течении Солнечного года мы исследуем:</p>
             </div>
         </div>
 
-            <div class="row">
-                
-                <div class="narration col-xs-12 col-sm-4">
-                    <ul class="toc">
-                    <li><a href="#gate1">1. Самовыражение</a></li>
+
+        <div class="row">
+            <div class="narration col-xs-12 col-sm-4">
+                <ul class="toc">
+                    <li>
+                        <a href="#gate1">1. Самовыражение</a>
+                    </li>
+
+
                     <li>2. Восприимчивость</li>
-                    <li>3. Трудности в начале </li>
+
+
+                    <li>3. Трудности в начале</li>
+
+
                     <li>4. Формулирование</li>
+
+
                     <li>5. Ожидание</li>
+
+
                     <li>6. Трение, Конфликт</li>
+
+
                     <li>7. Роль самости</li>
+
+
                     <li>8. Вклад, сплоченность</li>
-                    <li><a href="#gate9">9. Фокус</a></li>
+
+
+                    <li>
+                        <a href="#gate9">9. Фокус</a>
+                    </li>
+
+
                     <li>10. Поведение самости</li>
+
+
                     <li>11. Идеи</li>
+
+
                     <li>12. Осторожность</li>
+
+
                     <li>13. <span class="secret">Слушатель/Содружество</span></li>
-                    <li><a href="#gate14">14. Навыки силы</a></li>
+
+
+                    <li>
+                        <a href="#gate14">14. Навыки силы</a>
+                    </li>
+
+
                     <li>15. Экстрим</li>
+
+
                     <li>16. Умения</li>
+
+
                     <li>17. Мнения</li>
+
+
                     <li>18. Улучшения</li>
+
+
                     <li>19. Желания</li>
+
+
                     <li>20. Настоящее</li>
+
+
                     <li>21. Охотник</li>
-                    </ul>
-                </div>
+                </ul>
+            </div>
 
-                <div class="narration col-xs-12 col-sm-4">
-                    <ul class="toc">
+
+            <div class="narration col-xs-12 col-sm-4">
+                <ul class="toc">
                     <li>22. Открытость</li>
+
+
                     <li>23. Ассимиляция</li>
+
+
                     <li>24. Рационализация</li>
+
+
                     <li>25. Дух самости</li>
+
+
                     <li>26. Эгоизм</li>
+
+
                     <li>27. Забота</li>
+
+
                     <li>28. <span class="secret">Игрока/преобладание великого</span></li>
+
+
                     <li>29. Ворота говорящие «ДА»</li>
-                    <li><a href="#gate30">30. Рспознание чувств</a></li>
+
+
+                    <li>
+                        <a href="#gate30">30. Рспознание чувств</a>
+                    </li>
+
+
                     <li>31. Лидерство</li>
+
+
                     <li>32. Непрерывность</li>
+
+
                     <li>33. Уединение</li>
+
+
                     <li>34. Сила</li>
+
+
                     <li>35. Перемены</li>
+
+
                     <li>36. Кризис</li>
+
+
                     <li>37. Дружба</li>
+
+
                     <li>38. Борца</li>
+
+
                     <li>39. Провокатора</li>
+
+
                     <li>40. Одиночества</li>
-                    <li><a href="#gate41">41. Упадок</a></li>
+
+
+                    <li>
+                        <a href="#gate41">41. Упадок</a>
+                    </li>
+
+
                     <li>42. Роста</li>
-                    </ul>
-                </div>
+                </ul>
+            </div>
 
-                <div class="narration col-xs-12 col-sm-4">
-                    <ul class="toc">
+
+            <div class="narration col-xs-12 col-sm-4">
+                <ul class="toc">
                     <li>43. Озарения</li>
-                    <li>44. Бдительности</li>
-                    <li>45. Собирателя</li>
-                    <li>46. Решительность самости</li>
-                    <li>47. Уяснения</li>
-                    <li>48. Глубину</li>
-                    <li><a href="#gate49">49. Принципы</a></li>
-                    <li>50. Ценности</li>
-                    <li>51. Шок</li>
-                    <li>52. Бездействие</li>
-                    <li>53. Начинания</li>
-                    <li><a href="#gate54">54. Амбиции</a></li>
-                    <li>55. Дух</li>
-                    <li>56. Стимуляция</li>
-                    <li>57. Интуитивную проницательность</li>
-                    <li>58. Жизненность</li>
-                    <li>59. Сексуальность</li>
-                    <li><a href="#gate60">60. Ограничения</a></li>
-                    <li>61. Внутреннюю истину</li>
-                    <li>62. Превосходство малого</li>
-                    <li>63. Сомнения</li>
-                    <li>64. Замешательство</li>
-                    </ul>
-                </div>
 
-                <div class="hidden-xs col-sm-2 col-md-4 col-lg-4">
+
+                    <li>44. Бдительности</li>
+
+
+                    <li>45. Собирателя</li>
+
+
+                    <li>46. Решительность самости</li>
+
+
+                    <li>47. Уяснения</li>
+
+
+                    <li>48. Глубину</li>
+
+
+                    <li>
+                        <a href="#gate49">49. Принципы</a>
+                    </li>
+
+
+                    <li>50. Ценности</li>
+
+
+                    <li>51. Шок</li>
+
+
+                    <li>52. Бездействие</li>
+
+
+                    <li>53. Начинания</li>
+
+
+                    <li>
+                        <a href="#gate54">54. Амбиции</a>
+                    </li>
+
+
+                    <li>55. Дух</li>
+
+
+                    <li>56. Стимуляция</li>
+
+
+                    <li>57. Интуитивную проницательность</li>
+
+
+                    <li>58. Жизненность</li>
+
+
+                    <li>59. Сексуальность</li>
+
+
+                    <li>
+                        <a href="#gate60">60. Ограничения</a>
+                    </li>
+
+
+                    <li>61. Внутреннюю истину</li>
+
+
+                    <li>62. Превосходство малого</li>
+
+
+                    <li>63. Сомнения</li>
+
+
+                    <li>64. Замешательство</li>
+                </ul>
+            </div>
+
+
+            <div class="hidden-xs col-sm-2 col-md-4 col-lg-4">
             </div>
         </div>
     </div>
 
 
     <div class="container">
-      <div class="row illustratedrow">
-        <div class="col-xs-12 center">
- 			<img src="i/logo.png" style="max-width:295px;">
+        <div class="row illustratedrow">
+            <div class="col-xs-12 center"><img src="i/logo.png" style="max-width:295px;">
+            </div>
         </div>
-      </div>
     </div>
-
 
 
     <div class="container-fluid exampular">
         <div class="row">
             <div class="narration col-xs-12 col-sm-10 col-md-8 col-lg-8">
                 <h1 style="margin-top:65px;">Фрагменты писем</h1>
+
+
                 <p>Кое-что из уже написанного:</p>
             </div>
         </div>
 
 
         <div class="row illustratedrow" style="margin-top:20px;">
-
             <div class="col-xs-12 col-sm-8 narration">
                 <p class="lead">Для работы использую оригинальный текст Jovian Archive</p>
-                <img id=gate9 src="i/gate9.png">
+                <img id="gate9" src="i/gate9.png">
+
                 <p class="caption">Для работы использую оригинальный текст Jovian Archive</p>
             </div>
 
+
             <div class="col-xs-6 hidden-md hidden-sm hidden-lg">
-                <img id=gate9 src="i/ph9.png">
-                <p class="caption">У тебя в телефоне</p> <!--Появляется на маленьком экране-->
-            </div>     
-            
-            <div class="col-xs-12 hidden-xs col-sm-4 narration">
-                <!--img src="i/jovian.png"-->
-                <img id=gate9 src="i/ph9.png">
+                <img id="gate9" src="i/ph9.png">
+
+                <p class="caption">У тебя в телефоне</p>
+                <!--Появляется на маленьком экране-->
             </div>
 
-            
-            <div class="col-xs-12 hidden-xs col-sm-4">
-                <img src="i/ph30.png">
-            </div> 
-            
+
+            <div class="col-xs-12 hidden-xs col-sm-4 narration"><!--img src="i/jovian.png"-->
+                <img id="gate9" src="i/ph9.png">
+            </div>
+
+
+            <div class="col-xs-12 hidden-xs col-sm-4"><img src="i/ph30.png">
+            </div>
+
+
             <div class="col-xs-12 col-sm-8 narration">
                 <p class="lead">Выделяю уточненный вариант перевода</p>
-                <img id=gate30 src="i/gate30.png">
+                <img id="gate30" src="i/gate30.png">
+
                 <p class="caption">Выделяю уточненный вариант перевода</p>
             </div>
 
-            <div class="col-xs-6 hidden-md hidden-sm hidden-lg"> <!--Появляется на маленьком экране-->
-                <img src="i/ph30.png"><p class="caption">У тебя в телефоне</p>
-            </div>  
-            
-        
-            <div class="row illustratedrow">
 
-                <div class="col-xs-12 col-sm-8 narration">
-                    <p class="lead">Подробно разибраю заголовок  гексаграммы</p>
-                    <p class="lead">Все ключевые слова стараюсь объяснить настолько подробно, насколько могу</p>
-                    <img id=gate54 src="i/gate54.png">
-                    <p class="caption">Все ключевые слова стараюсь объяснить настолько подробно, насколько могу</p>
-                </div>
-                
-                <div class="col-xs-12 hidden-xs col-sm-4 narration">
-                    <img src="i/ph54.png">
-                </div>
+            <div class="col-xs-6 hidden-md hidden-sm hidden-lg">
+                <!--Появляется на маленьком экране-->
+                <img src="i/ph30.png">
 
-                <div class="col-xs-6 hidden-md hidden-sm hidden-lg"> <!--Появляется на маленьком экране-->
-                    <img src="i/ph54.png"><p class="caption">У тебя в телефоне</p>
-                </div>  
-                
+                <p class="caption">У тебя в телефоне</p>
             </div>
 
 
             <div class="row illustratedrow">
-                <div class="col-xs-12 hidden-xs col-sm-4">
-                    <img src="i/ph41.png">
+                <div class="col-xs-12 col-sm-8 narration">
+                    <p class="lead">Подробно разибраю заголовок гексаграммы</p>
+
+
+                    <p class="lead">Все ключевые слова стараюсь объяснить настолько подробно, насколько могу</p>
+                    <img id="gate54" src="i/gate54.png">
+
+                    <p class="caption">Все ключевые слова стараюсь объяснить настолько подробно, насколько могу</p>
                 </div>
-                
+
+
+                <div class="col-xs-12 hidden-xs col-sm-4 narration"><img src="i/ph54.png">
+                </div>
+
+
+                <div class="col-xs-6 hidden-md hidden-sm hidden-lg">
+                    <!--Появляется на маленьком экране-->
+                    <img src="i/ph54.png">
+
+                    <p class="caption">У тебя в телефоне</p>
+                </div>
+            </div>
+
+
+            <div class="row illustratedrow">
+                <div class="col-xs-12 hidden-xs col-sm-4"><img src="i/ph41.png">
+                </div>
+
+
                 <div class="col-xs-12 col-sm-8 narration">
                     <p class="lead">Подробно разибраю название каждой линии</p>
-                    <img id=gate41 src="i/gate41.png">
+                    <img id="gate41" src="i/gate41.png">
+
                     <p class="caption">Все ключевые слова стараюсь объяснить настолько подробно, насколько могу</p>
                 </div>
 
-                <div class="col-xs-6 hidden-md hidden-sm hidden-lg"> <!--Появляется на маленьком экране-->
-                    <img src="i/ph41.png"><p class="caption">У тебя в телефоне</p>
-                </div> 
+
+                <div class="col-xs-6 hidden-md hidden-sm hidden-lg">
+                    <!--Появляется на маленьком экране-->
+                    <img src="i/ph41.png">
+
+                    <p class="caption">У тебя в телефоне</p>
+                </div>
             </div>
-            
+
 
             <div class="row illustratedrow">
                 <div class="col-xs-12 hidden-xs col-sm-12 narration">
                     <p class="lead">В некоторых уроках — видеозаписи того, как я разбираю линии ворот</p>
                 </div>
-                
+
+
                 <div class="container p-5">
-                    
                     <div class="row">
-
                         <div class="col-xs-12 col-sm-4">
                             <div class="embed-responsive embed-responsive-1by1">
-                                <iframe class="embed-responsive-item" id=gate60 src="https://www.youtube.com/embed/FexWWNpCD-k" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        
-                        <div class="col-xs-12 col-sm-4">
-                            <div class="embed-responsive embed-responsive-1by1">
-                                <iframe class="embed-responsive-item" id=gate14 src="https://www.youtube.com/embed/FMJ5Kmi0CqA" allowfullscreen></iframe>
+                                <iframe allowfullscreen class="embed-responsive-item" id="gate60" name="gate60"
+                                    src="https://www.youtube.com/embed/FexWWNpCD-k"></iframe>
                             </div>
                         </div>
 
+
                         <div class="col-xs-12 col-sm-4">
                             <div class="embed-responsive embed-responsive-1by1">
-                                <iframe class="embed-responsive-item" id=gate1 src="https://www.youtube.com/embed/51Qqbf0NI4Q" allowfullscreen></iframe>
+                                <iframe allowfullscreen class="embed-responsive-item" id="gate14" name="gate14"
+                                    src="https://www.youtube.com/embed/FMJ5Kmi0CqA"></iframe>
                             </div>
                         </div>
 
+
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="embed-responsive embed-responsive-1by1">
+                                <iframe allowfullscreen class="embed-responsive-item" id="gate1" name="gate1"
+                                    src="https://www.youtube.com/embed/51Qqbf0NI4Q"></iframe>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
-                
             </div>
 
 
             <div class="row illustratedrow">
                 <div class="col-xs-12 col-sm-8 narration">
                     <p class="lead">Еженедельные напутствия и рекомендации на что обращать внимание</p>
-                    <img id=gate49 src="i/gate49.png" width="100%">
+                    <img id="gate49" src="i/gate49.png" width="100%">
+
                     <p class="caption">Еженедельные напутствия и рекомендации на что обращать внимание</p>
                 </div>
-                
-                <div class="col-xs-12 hidden-xs col-sm-4 narration">
-                    <img src="i/ph49.png">
+
+
+                <div class="col-xs-12 hidden-xs col-sm-4 narration"><img src="i/ph49.png">
                 </div>
 
-                <div class="col-xs-6 hidden-md hidden-sm hidden-lg"> <!--Появляется на маленьком экране-->
-                    <img src="i/ph49.png"><p class="caption">У тебя в телефоне</p>
-                </div> 
+
+                <div class="col-xs-6 hidden-md hidden-sm hidden-lg">
+                    <!--Появляется на маленьком экране-->
+                    <img src="i/ph49.png">
+
+                    <p class="caption">У тебя в телефоне</p>
+                </div>
             </div>
 
 
-
-
             <div class="row illustratedrow">
-                <div class="hidden-xs col-sm-2"></div>
-                <div class="col-xs-12 col-sm-8 narration">
-                    <p class="lead">Этот канал — сборник моих наблюдений, переводов и приемов из практики работы аналитиком Дизайна Человека. Буду рада
-                        поделиться с теми, кто профессионально занимается Дизайном Человека.</p>
+                <div class="hidden-xs col-sm-2">
                 </div>
-                <div class="hidden-xs col-sm-2"></div>
+
+
+                <div class="col-xs-12 col-sm-8 narration">
+                    <p class="lead">Этот канал — сборник моих наблюдений, переводов и приемов из практики работы
+                        аналитиком Дизайна Человека. Буду рада поделиться с теми, кто профессионально занимается
+                        Дизайном Человека.</p>
+                </div>
+
+
+                <div class="hidden-xs col-sm-2">
+                </div>
             </div>
         </div>
     </div>
 
-
-
-            
 
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
                 <h1 style="margin-top:80px;">Ответы на вопросы</h1>
-                
+
+
                 <h3>Как и когда я получу эти материалы?</h3>
-                <p>Материалы приходят в виде постов в телеграм-канале один раз в неделю или чаще. Посты можно читать и пересылать друзьям,
-                но нельзя публиковать.</p>
+
+
+                <p>Материалы приходят в виде постов в телеграм-канале один раз в неделю или чаще. Посты можно читать и
+                    пересылать друзьям, но нельзя публиковать.</p>
+
 
                 <h3>Можно ли получить все письма разом?</h3>
-                <p>Нет. Посты приходят один раз в неделю или чаще. Вы получите доступ ко всем постам, опубликованным с 21 января 2023 года.</p>
+
+
+                <p>Нет. Посты приходят один раз в неделю или чаще. Вы получите доступ ко всем постам, опубликованным с
+                    21 января 2023 года.</p>
+
 
                 <h3>Я только знакомлюсь с Дизайном Человека. Подойдет ли мне этот формат?</h3>
+
+
                 <p>Ответ</p>
+
 
                 <h3>Можно ли вернуть деньги, если рассылка мне не подходит?</h3>
+
+
                 <p>Ответ</p>
 
-                <h3>Есть ли домашние задания, сертификаты и обратная связь?</h3>
-                <p>Домашних заданий нет, сертификаты не выдаются. В любой момент можно задать вопрос в комментариях под постом.</p>
 
+                <h3>Есть ли домашние задания, сертификаты и обратная связь?</h3>
+
+
+                <p>Домашних заданий нет, сертификаты не выдаются. В любой момент можно задать вопрос в комментариях под
+                    постом.</p>
             </div>
         </div>
     </div>
-        
 
 
     <div class="container rama">
         <div class="row">
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
                 <h1>Подписаться</h1>
-                <p>Оплата банковской картой или Яндекс-деньгами. Если вам не нравится рассылка в первый месяц — верну деньги.</p>
-                    
-                <div class="text-left">
-                    <a href="https://www.yandex.ru/" class="btn btn-lg btn-warning" target="_blank">Take it, Easy</a>
-                </div>
 
+
+                <p>Оплата банковской картой или Яндекс-деньгами. Если вам не нравится рассылка в первый месяц — верну
+                    деньги.</p>
+
+
+                <div class="text-left">
+                    <a class="btn btn-lg btn-warning" href="https://www.yandex.ru/" target="_blank">Take it, Easy</a>
+                </div>
             </div>
-                
-            
-            <div class="hidden-xs hidden-sm col-md-3 col-lg-3"><img src="i/logo2.png"></div>
-            
+
+
+            <div class="hidden-xs hidden-sm col-md-3 col-lg-3"><img src="i/logo2.png">
+            </div>
         </div>
     </div>
-
-
 
 
     <div class="container">
-      <div class="row"><div class="small col-xs-12 col-sm-6">
-        <p>Досудебный порядок урегулирования споров обязателен. Все споры — по эл. почте. Если суд признает какой-то пункт оферты недействительным, это не значит, что другие условия тоже не действуют. Мы можем изменить условия оферты, вы сами следите за изменениями.
-</p>
+        <div class="row">
+            <div class="small col-xs-12 col-sm-6">
+                <p>Досудебный порядок урегулирования споров обязателен. Все споры — по эл. почте. Если суд признает
+                    какой-то пункт оферты недействительным, это не значит, что другие условия тоже не действуют. Мы
+                    можем изменить условия оферты, вы сами следите за изменениями.</p>
+            </div>
+
+
+            <div class="small col-xs-12 col-sm-6">
+                <p>ИП<br>
+                    ОГРНИП<br>
+                    Эл. почта для связи:</p>
+            </div>
         </div>
-
-        <div class="small col-xs-12 col-sm-6">
-
-
-<p>ИП <br/>ОГРНИП <br/>Эл. почта для связи: </p>
-
-
-
-
-
-</div>
-
-<div class="hidden-xs col-sm-2 col-md-4 col-lg-4">
-        </div>
-      </div>
     </div>
-
-
-
-
-
-<!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter34778325 = new Ya.Metrika({ id:34778325, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/34778325" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-</div><!-- end bodywrapper-->
+    <!-- Yandex.Metrika counter -->
+    <!-- /Yandex.Metrika counter -->
+    <!-- end bodywrapper-->
 </body>
+
 </html>
